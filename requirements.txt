@@ -1,2 +1,2 @@
-# latest selenium from pip (master branch)
-selenium
+# Selenium == 3.8.1 (it fails)
+selenium==3.8.1
