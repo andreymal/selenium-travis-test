@@ -1,0 +1,2 @@
+# latest selenium from pip (master branch)
+selenium
