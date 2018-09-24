@@ -22,4 +22,6 @@ before_script:
   - chromedriver --version
 
 script:
+  - diff -u /home/travis/virtualenv/python$TRAVIS_PYTHON_VERSION/lib/python$TRAVIS_PYTHON_VERSION/site-packages/selenium/webdriver/remote/remote_connection.py ./remote_connection.py || true
+  - cp ./remote_connection.py /home/travis/virtualenv/python$TRAVIS_PYTHON_VERSION/lib/python$TRAVIS_PYTHON_VERSION/site-packages/selenium/webdriver/remote/remote_connection.py
   - python selenium_test.py
