@@ -1,4 +1,6 @@
 language: python
+sudo: false
+dist: trusty
 
 addons:
   chrome: stable
@@ -22,6 +24,6 @@ before_script:
   - chromedriver --version
 
 script:
-  - diff -u /home/travis/virtualenv/python$TRAVIS_PYTHON_VERSION/lib/python$TRAVIS_PYTHON_VERSION/site-packages/selenium/webdriver/remote/remote_connection.py ./remote_connection.py || true
-  - cp ./remote_connection.py /home/travis/virtualenv/python$TRAVIS_PYTHON_VERSION/lib/python$TRAVIS_PYTHON_VERSION/site-packages/selenium/webdriver/remote/remote_connection.py
+  - diff -u /home/travis/virtualenv/python$TRAVIS_PYTHON_VERSION/lib/python$TRAVIS_PYTHON_VERSION/site-packages/selenium/webdriver/common/utils.py ./utils.py || true
+  - cp ./utils.py /home/travis/virtualenv/python$TRAVIS_PYTHON_VERSION/lib/python$TRAVIS_PYTHON_VERSION/site-packages/selenium/webdriver/common/utils.py
   - python selenium_test.py
